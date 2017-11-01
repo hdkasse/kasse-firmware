@@ -1,9 +1,9 @@
 
 ## Kasse Build Procedure
 
-Download firmware source code from Kasse respository (https://github.com/HyundaiPay/kasse-firmware.git)
+Download firmware source code from Kasse respository (https://github.com/hdkasse/kasse-firmware.git)
 ```
-$ git clone git@github.com:HyundaiPay/kasse-firmware.git
+$ git clone https://github.com/hdkasse/kasse-firmware.git
 ```
 
 ### Build environment
