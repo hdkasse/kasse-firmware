@@ -198,7 +198,7 @@ static int8_t CUSTOM_HID_OutEvent_FS  (uint8_t event_idx, uint8_t state)
   uint8_t i;
   UsbMessage m;
 
-  memset(m.message, 0x0, sizeof(MAX_MESSAGE_SIZE));
+  memset(m.message, 0x0, MAX_MESSAGE_SIZE);
   
   for(i = 0; i < MIN(CUSTOM_HID_EPIN_SIZE, hUsbDevicePtr->ep0_data_len); i++)
   {
