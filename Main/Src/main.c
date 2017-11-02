@@ -349,7 +349,7 @@ void raw_message_callback(uint8_t *msg, uint32_t len)
   {
     if(!pincode_validation())
     {
-      memset(raw_m.data, 0x0, sizeof(DATA_MAX_SIZE));
+      memset(raw_m.data, 0x0, DATA_MAX_SIZE);
       raw_m.sub_id = NEED_PIN_VERIFY;
       usb_tx_message((uint8_t *)&raw_m, sizeof(hid_raw_msg_type));
       return;
@@ -393,7 +393,7 @@ void raw_message_callback(uint8_t *msg, uint32_t len)
   {
     if(!pincode_validation())
     {
-      memset(raw_m.data, 0x0, sizeof(DATA_MAX_SIZE));
+      memset(raw_m.data, 0x0, DATA_MAX_SIZE);
       raw_m.sub_id = NEED_PIN_VERIFY;
       usb_tx_message((uint8_t *)&raw_m, sizeof(hid_raw_msg_type));
       return;
@@ -421,7 +421,7 @@ void raw_message_callback(uint8_t *msg, uint32_t len)
   {
     if((s_state == SEED_GEN_STATE) ||(s_state == SEED_RECOVERY_STATE))//||(s_state == PIN_CODE_STATE))
     {
-      memset(raw_m.data, 0x0, sizeof(DATA_MAX_SIZE));
+      memset(raw_m.data, 0x0, DATA_MAX_SIZE);
       raw_m.msg_id = msg_id;
       raw_m.data_len = 1;
       raw_m.data[0] = 2;
