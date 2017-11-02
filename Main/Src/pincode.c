@@ -540,7 +540,7 @@ void pin_state_mach(uint32_t *evt_mask, uint8_t *lang)
     case PIN_VERIFY:
       if(p_type == PROC_CHANGE_PIN)
       {
-        apdu_result = (!memcmp(incode.code, dev_feature.pin_status.pin_code, sizeof(incode.curr_pos+1))
+        apdu_result = (!memcmp(incode.code, dev_feature.pin_status.pin_code, incode.curr_pos+1)
                        && ((incode.curr_pos+1) == dev_feature.pin_status.pin_len));
         if(apdu_result)
         {
